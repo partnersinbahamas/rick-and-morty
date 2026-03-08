@@ -136,3 +136,5 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+RICK_MORTY_CHARACTERS_API = "https://rickandmortyapi.com/api/character"
