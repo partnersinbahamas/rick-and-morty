@@ -151,3 +151,10 @@ MEDIA_URL = "/media/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 RICK_MORTY_CHARACTERS_API = "https://rickandmortyapi.com/api/character"
+
+# Celery
+CELERY_BROKER_URL = "redis://localhost:6380"
+CELERY_RESULT_BACKEND = "redis://localhost:6380"
+CELERY_TIMEZONE = "Europe/Berlin"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
