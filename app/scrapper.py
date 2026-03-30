@@ -19,6 +19,12 @@ def scrap_characters() -> list[Character]:
         characters_response = response.json()
 
         for character in characters_response["results"]:
+            is_character_already_in_db = Character.objects.filter(api_id=character["id"]).exists()
+
+            if is_character_already_in_db:
+                print(f"Character with id {character['id']} already in the database.")
+                continue
+
             api_id = character["id"]
             name = character["name"]
             status = character["status"]
@@ -37,7 +43,7 @@ def scrap_characters() -> list[Character]:
 
             characters.append(character)
 
-            next_url = characters_response["info"]["next"]
+        next_url = characters_response["info"]["next"]
 
     return characters
 
