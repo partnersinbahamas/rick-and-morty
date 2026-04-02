@@ -11,6 +11,9 @@
     POSTGRES_HOST=localhost
     POSTGRES_PORT=5436
     PGDATA=/var/lib/postgresql/data
+  
+    CELERY_BROKER_URL=url
+    CELERY_RESULT_BACKEND=url
     
     DJANGO_SECRET_KEY=secret-key
     DJANGO_ENV=.env
@@ -24,6 +27,9 @@
     POSTGRES_HOST=db
     POSTGRES_PORT=5432
     PGDATA=/var/lib/postgresql/data
+  
+    CELERY_BROKER_URL=url
+    CELERY_RESULT_BACKEND=url
     
     DJANGO_SECRET_KEY=secret-key
     DJANGO_ENV=.env.docker
