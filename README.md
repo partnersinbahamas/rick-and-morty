@@ -34,11 +34,9 @@
     DJANGO_SECRET_KEY=secret-key
     DJANGO_ENV=.env.docker
     ```
-
+- Create super user & periodic tasks
 - Build docker image `docker-compose build`
 - Run Docker container `docker-compose up`
 - Install requirements `pip install -r requirements.txt`
 - Run migrations `python manage.py migrate`
-- Run Celery tasks worker `celery -A app worker -l INFO`
-- Run Django Celery Beat `celery -A app beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler`
-- Done
+- Run your application on http://127.0.0.1:8000/ url.
